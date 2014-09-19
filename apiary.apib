@@ -1,46 +1,18 @@
 FORMAT: 1A
 
-# copoli
-Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+# The Simplest API
+This is one of the simplest APIs written in the **API Blueprint**. 
+One plain resource combined with a method and that's it! We will explain what is going on in the next installment - [Resource and Actions](2.%20Resource%20and%20Actions.md).
 
-# Group Notes
-Notes related resources of the **Notes API**
+**Note:** As we progress through the examples, do not also forget to view the [Raw](https://raw.github.com/apiaryio/api-blueprint/master/examples/1.%20Simplest%20API.md) code to see what is really going on in the API Blueprint, as opposed to just seeing the output of the Github Markdown parser. 
 
-## Notes Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
+Also please keep in mind that every single example in this course is a **real API Blueprint** and as such you can **parse** it with the [API Blueprint parser](https://github.com/apiaryio/snowcrash) or one of its [bindings](https://github.com/apiaryio/snowcrash#bindings).
 
-        [{
-          "id": 1, "title": "Jogging in park"
-        }, {
-          "id": 2, "title": "Pick-up posters from post-office"
-        }]
+## API Blueprint
++ [This: Raw API Blueprint](https://raw.github.com/apiaryio/api-blueprint/master/examples/1.%20Simplest%20API.md)
++ [Next: Resource and Actions](2.%20Resource%20and%20Actions.md)
 
-### Create a Note [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
-
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-
-### Retrieve a Note [GET]
-+ Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
-
-    + Body
-
-            { "id": 2, "title": "Pick-up posters from post-office" }
-
-### Remove a Note [DELETE]
-+ Response 204
+# GET /message
++ Response 200 (text/plain)
+    
+        Hello World!
