@@ -17,9 +17,7 @@ namespace Retrofit.Net
         {
             this.restClient = client;
         }
-
-
-
+        
         public string Server
         {
             get; set; }
